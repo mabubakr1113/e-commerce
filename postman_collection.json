@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "1967ec3e-1376-429b-99df-51b4edbadb83",
+		"name": "E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30456120"
+	},
+	"item": [
+		{
+			"name": "Create Product 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Premium Cotton Hoodie\",\r\n    \"description\": \"Heavyweight 100% cotton hoodie with kangaroo pocket\",\r\n    \"highlights\": [\r\n        \"100% Premium Cotton\",\r\n        \"Double-lined Hood\",\r\n        \"Kangaroo Pocket\",\r\n        \"Ribbed Cuffs and Hem\"\r\n    ],\r\n    \"specifications\": [\r\n        {\r\n            \"title\": \"Material\",\r\n            \"description\": \"100% Ring-Spun Cotton\"\r\n        },\r\n        {\r\n            \"title\": \"Fit\",\r\n            \"description\": \"Regular Fit\"\r\n        },\r\n        {\r\n            \"title\": \"Care Instructions\",\r\n            \"description\": \"Machine wash cold, tumble dry low\"\r\n        }\r\n    ],\r\n    \"price\": 45.99,\r\n    \"cuttedPrice\": 59.99,\r\n    \"images\": [\r\n        {\r\n            \"public_id\": \"hoodie_front\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/hoodie_front.jpg\"\r\n        },\r\n        {\r\n            \"public_id\": \"hoodie_back\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/hoodie_back.jpg\"\r\n        },\r\n        {\r\n            \"public_id\": \"hoodie_detail\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/hoodie_detail.jpg\"\r\n        }\r\n    ],\r\n    \"brand\": {\r\n        \"name\": \"UrbanStyle\",\r\n        \"logo\": {\r\n            \"public_id\": \"urbanstyle_logo\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/urbanstyle_logo.png\"\r\n        }\r\n    },\r\n    \"category\": \"Apparel\",\r\n    \"stock\": 150\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Stainless Steel Air Fryer\",\r\n    \"description\": \"8-quart digital air fryer with 7 cooking presets\",\r\n    \"highlights\": [\r\n        \"8-Quart Capacity\",\r\n        \"7 One-Touch Presets\",\r\n        \"1500W Power\",\r\n        \"Dishwasher-Safe Basket\"\r\n    ],\r\n    \"specifications\": [\r\n        {\r\n            \"title\": \"Capacity\",\r\n            \"description\": \"8 Quarts\"\r\n        },\r\n        {\r\n            \"title\": \"Power\",\r\n            \"description\": \"1500 Watts\"\r\n        },\r\n        {\r\n            \"title\": \"Dimensions\",\r\n            \"description\": \"14.2 x 12.4 x 15.7 inches\"\r\n        }\r\n    ],\r\n    \"price\": 89.99,\r\n    \"cuttedPrice\": 119.99,\r\n    \"images\": [\r\n        {\r\n            \"public_id\": \"airfryer_main\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/airfryer_main.jpg\"\r\n        },\r\n        {\r\n            \"public_id\": \"airfryer_controls\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/airfryer_controls.jpg\"\r\n        }\r\n    ],\r\n    \"brand\": {\r\n        \"name\": \"KitchenPro\",\r\n        \"logo\": {\r\n            \"public_id\": \"kitchenpro_logo\",\r\n            \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/kitchenpro_logo.png\"\r\n        }\r\n    },\r\n    \"category\": \"Home & Kitchen\",\r\n    \"stock\": 85,\r\n    \"warranty\": 1,\r\n    \"ratings\": 4.5,\r\n    \"numOfReviews\": 3,\r\n    \"reviews\": [\r\n        {\r\n            \"user\": \"65f7a1b2c9e6b3f8d4e3f5a2\",\r\n            \"name\": \"Sarah Johnson\",\r\n            \"rating\": 5,\r\n            \"comment\": \"Cooks food perfectly every time!\"\r\n        },\r\n        {\r\n            \"user\": \"65f7a1b2c9e6b3f8d4e3f5a3\",\r\n            \"name\": \"Michael Chen\",\r\n            \"rating\": 4,\r\n            \"comment\": \"Great value for money, but a bit bulky\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Validation Error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Stainless Steel Air Fryer\",\r\n  \"highlights\": [\r\n    \"8-Quart Capacity\",\r\n    \"7 One-Touch Presets\",\r\n    \"1500W Power\",\r\n    \"Dishwasher-Safe Basket\"\r\n  ],\r\n  \"specifications\": [\r\n    {\r\n      \"title\": \"Capacity\",\r\n      \"description\": \"8 Quarts\"\r\n    },\r\n    {\r\n      \"title\": \"Power\",\r\n      \"description\": \"1500 Watts\"\r\n    },\r\n    {\r\n      \"title\": \"Dimensions\",\r\n      \"description\": \"14.2 x 12.4 x 15.7 inches\"\r\n    }\r\n  ],\r\n  \"price\": 89.99,\r\n  \"cuttedPrice\": 119.99,\r\n  \"images\": [\r\n    {\r\n      \"public_id\": \"airfryer_main\",\r\n      \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/airfryer_main.jpg\"\r\n    },\r\n    {\r\n      \"public_id\": \"airfryer_controls\",\r\n      \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/airfryer_controls.jpg\"\r\n    }\r\n  ],\r\n  \"brand\": {\r\n    \"name\": \"KitchenPro\",\r\n    \"logo\": {\r\n      \"public_id\": \"kitchenpro_logo\",\r\n      \"url\": \"https://res.cloudinary.com/demo/image/upload/v1/kitchenpro_logo.png\"\r\n    }\r\n  },\r\n  \"category\": \"Home & Kitchen\",\r\n  \"stock\": 85,\r\n  \"warranty\": 1,\r\n  \"ratings\": 4.5,\r\n  \"numOfReviews\": 3,\r\n  \"reviews\": [\r\n    {\r\n      \"user\": \"65f7a1b2c9e6b3f8d4e3f5a2\",\r\n      \"name\": \"Sarah Johnson\",\r\n      \"rating\": 5,\r\n      \"comment\": \"Cooks food perfectly every time!\"\r\n    },\r\n    {\r\n      \"user\": \"65f7a1b2c9e6b3f8d4e3f5a3\",\r\n      \"name\": \"Michael Chen\",\r\n      \"rating\": 4,\r\n      \"comment\": \"Great value for money, but a bit bulky\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:5000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/products/687631a2796dc1536cff32e4"
+			},
+			"response": []
+		},
+		{
+			"name": "Filter products by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products?category=Electronics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Electronics"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
